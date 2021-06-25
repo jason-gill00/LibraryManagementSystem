@@ -30,7 +30,7 @@ MainMenu()
                 if [ "$CHOICE" == "1" ]
                 then
                     echo "Creating all tables"
-                    sqlplus64 "jcabugua/11245288@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
+                    sqlplus64 "oracle_url@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
 			
 			
 			SELECT c.CUSTOMERID, c.EMAIL, m.MEMBERSHIPNAME
@@ -43,7 +43,7 @@ MainMenu()
 
 		elif [ "$CHOICE" == "2" ]
                 then
-			sqlplus64 "jcabugua/11245288@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
+			sqlplus64 "oracle_url@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
 			
 			SELECT 
 			    ORDERID,
@@ -65,7 +65,7 @@ MainMenu()
 
 		elif [ "$CHOICE" == "3" ]
 		then
-            sqlplus64 "jcabugua/11245288@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
+            sqlplus64 "oracle_url@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
 			
 			SELECT 
 				e.EMPLOYEEID,
@@ -84,7 +84,7 @@ MainMenu()
 
 		elif [ "$CHOICE" == "4" ]
                 then
-			sqlplus64 "jcabugua/11245288@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
+			sqlplus64 "oracle_url@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
 			
 			SELECT
 				L.ITEMID,
@@ -104,7 +104,7 @@ MainMenu()
 
 		elif [ "$CHOICE" == "5" ]
 		then
-			sqlplus64 "jcabugua/11245288@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF	
+			sqlplus64 "oracle_url@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF	
 			
 
 			SELECT *
@@ -116,7 +116,7 @@ MainMenu()
 
 		elif [ "$CHOICE" == "6" ]
 		then
-			sqlplus64 "jcabugua/11245288@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
+			sqlplus64 "oracle_url@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
 			
 
 			SELECT 
@@ -130,7 +130,7 @@ MainMenu()
 
 		elif [ "$CHOICE" == "7" ]
 		then
-			sqlplus64 "jcabugua/11245288@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
+			sqlplus64 "oracle_url@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
 			
 
 			SELECT *
@@ -142,7 +142,7 @@ MainMenu()
 
 		elif [ "$CHOICE" == "8" ]
 		then
-			sqlplus64 "jcabugua/11245288@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
+			sqlplus64 "oracle_url@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
 			
 
 			SELECT * 
@@ -154,7 +154,7 @@ MainMenu()
 
 		elif [ "$CHOICE" == "9" ]
 		then
-			sqlplus64 "jcabugua/11245288@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
+			sqlplus64 "oracle_url@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
 			
 			SELECT *
 			FROM CUSTOMER c
@@ -169,7 +169,7 @@ MainMenu()
 
 		elif [ "$CHOICE" == "10" ]
 		then
-			sqlplus64 "jcabugua/11245288@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
+			sqlplus64 "oracle_url@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
 			
 			SELECT r.RENTALDATE, c.EMAIL, r.OVERDUEAMOUNT
 			FROM RENTALORDER r, CUSTOMER c 
@@ -184,7 +184,7 @@ MainMenu()
 
 		elif [ "$CHOICE" == "11" ]
 		then
-			sqlplus64 "jcabugua/11245288@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
+			sqlplus64 "oracle_url@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
 			
 			CREATE VIEW manager_phone AS
 			(SELECT 
@@ -227,7 +227,7 @@ MainMenu()
 
 		elif [ "$CHOICE" == "12" ]
 		then
-			sqlplus64 "jcabugua/11245288@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
+			sqlplus64 "oracle_url@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
 			
 			DROP VIEW item_order_status;
 			DROP VIEW potential_employee;
