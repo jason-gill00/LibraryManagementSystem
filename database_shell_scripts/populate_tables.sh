@@ -1,4 +1,4 @@
-sqlplus64 "jcabugua/11245288@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(Host=oracle.scs.ryerson.ca)(Port=1521))(CONNECT_DATA=(SID=orcl)))" <<-EOF
+sqlplus64 "oracle/pass@(DESCRIPTION=()(CONNECT_DATA=(SID=orcl)))" <<-EOF
 
 INSERT ALL
 INTO person 
